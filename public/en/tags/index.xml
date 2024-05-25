@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on TounSec</title>
+    <link>https://example.com/en/tags/</link>
+    <description>Recent content in Tags on TounSec</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FlipperZero</title>
+      <link>https://example.com/en/tags/flipperzero/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/en/tags/flipperzero/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hardware</title>
+      <link>https://example.com/en/tags/hardware/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/en/tags/hardware/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
