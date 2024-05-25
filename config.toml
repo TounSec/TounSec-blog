@@ -1,7 +1,7 @@
 baseURL = "https://example.com"
 title   = "TounSec"
 languageCode = "en-us"
-theme = "hello-4s3ti"
+theme = "hugo-theme-hello-4s3ti"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
