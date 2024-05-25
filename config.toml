@@ -80,6 +80,7 @@ defaultContentLanguage = "fr"
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   #
   disableReadOtherPosts = false
+    tags = true
   
   # Sets the default theme
   defaultTheme = "dark"
@@ -129,7 +130,7 @@ defaultContentLanguage = "fr"
   justifyContent = false  # Set "text-align: justify" to .post-content.
 
   [params.fontAwesome]
-    KitURL = "https://kit.fontawesome.com/KitID.js"
+    KitURL = "https://kit.fontawesome.com/b79bc5a2b6.js"
 
   [params.footer]
     trademark = true
