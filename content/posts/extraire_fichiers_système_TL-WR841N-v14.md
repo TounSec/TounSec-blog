@@ -162,7 +162,7 @@ Après avoir réalisé cet essais afin de confirmer que le problème survenu lor
 
 Et bien, pour vérifier une dernière fois avant d'enlever la résistance, j'ai décidé d'alimenter en **5V** un court instant depuis mon **CH340G** histoire de tester et de voir si je pouvais entrer des commandes.
 
-Ça marche! Nous avons donc effectivement trouvé notre coupable. J’ai pensé que **déssouder la résistance** serait trop dangereux pour l'intégrité des autres étants donnés leurs espacements très faibles (2 autres résistances SMD très proches), mais avec une **pince de précision coudée**, ça a fait l'affaire.
+Ça marche! Nous avons donc effectivement trouvé notre coupable. J’ai pensé que **déssouder la résistance** serait trop dangereux pour l'intégrité des autres étants donnés leurs espacements très faibles (2 autres résistances SMD très proches), mais avec une **pince de précision coudée**, ça a fait l'affaire. On aurait également pu faire un pont avec un fil a étain entre la pin RX du routeur et la sortie de la résistance sur le circuit qui bloque la transmission des bits envoyés par la pin **TX du CH340G**.
 
 ![root](/images_extraire_fichiers_systeme_TL-WR841N-v14/Screenshot_20240526_041428.png)
 On peut voir que nous avons un **shell root** par défaut **sans authentification au préalable**!
