@@ -213,6 +213,6 @@ tftp -pr fs.tar -l fs.tar 192.168.0.100
 ---
 # Conclusion
 
-Nous avons atteint notre objectif initial, qui consistait à récupérer les **fichiers système du routeur via la console série** en utilisant le protocole de communication série **UART**. À l'avenir, nous prévoyons **d'extraire le firmware à partir de la mémoire flash**, qui se commune avec le CPU grâce au protocole de communication série **SPI**, et de procéder à la **rétro ingénierie de ce firmware**.
+Nous avons atteint notre objectif initial, qui consistait à récupérer les **fichiers système du routeur via la console série** en utilisant le protocole de communication série **UART**. À l'avenir, nous prévoyons **d'extraire le firmware à partir de la mémoire flash**, qui communique avec le CPU grâce au protocole de communication série **SPI**, et de procéder à la **rétro ingénierie de ce firmware**.
 
 Je souhaite également souligner que, malgré la possibilité d'effectuer beaucoup plus d'opérations via **l'UART**, notamment avec un **accès root non authentifié**, cela n'était pas dans notre objectif original.
