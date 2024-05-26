@@ -149,7 +149,7 @@ We quickly realize that it's not possible to enter commands: we're in fact in a 
 
 #### How do you counter this handwriting protection?
 
-At first, out of logic, I thought there must be something blocking traffic between the **TX pin on my CH340G** and the **RX pin on the router**. A little digging soon revealed a rather suspicious **SMD-type resistor** right in front of the **RX pin on the router**. This is a fairly common method used as **security for the UART** to block writing to the serial console, it cuts off the transmission emitted from the **TX pin of the USB**, the **RX pin of the PCB** does receive the data but when it transmits it to the **CPU** for interpretation, the **resistor blocks it**.
+At first, out of logic, I thought there must be something blocking traffic between the **TX pin on my CH340G** and the **RX pin on the router**. A little digging soon revealed a rather suspicious **SMD-type resistor** right in front of the **RX pin on the router** (R18). This is a fairly common method used as **security for the UART** to block writing to the serial console, it cuts off the transmission emitted from the **TX pin of the USB**, the **RX pin of the PCB** does receive the data but when it transmits it to the **CPU** for interpretation, the **resistor blocks it**.
 
 With a multimeter, we get a value of **1kΩ** on this resistor, so it could be our culprit.
 
@@ -162,7 +162,7 @@ After running this test to confirm that the problem occurred when receiving data
 
 Well, to check one last time before removing the resistor, I decided to supply **5V** for a short while from my **CH340G** just to test and see if I could enter any commands.
 
-It works! So we have indeed found our culprit. I thought that **unsoldering the resistor** would be too dangerous for the integrity of the others, given their very small spacing (2 other SMD resistors very close together), but with a **angled precision pliers**, it did the trick. We could also have made a bridge with tin wire between the router's RX pin and the output of the resistor on the circuit that blocks the transmission of bits sent by the **CH340G**'s **TX pin**.
+It works! So we have indeed found our culprit. I thought that **unsoldering the resistor** (R18) would be too dangerous for the integrity of the others, given their very small spacing (2 other SMD resistors very close together), but with a **angled precision pliers**, it did the trick. We could also have made a bridge with tin wire between the router's RX pin and the output of the resistor on the circuit that blocks the transmission of bits sent by the **CH340G**'s **TX pin**.
 
 ![root](/images_extraire_fichiers_systeme_TL-WR841N-v14/Screenshot_20240526_041428.png)
 We can see that we have a default **root** shell **without prior authentication**!

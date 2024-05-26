@@ -149,7 +149,7 @@ On s'aperçoit rapidement qu'il n'est pas possible de rentrer des commandes, nou
 
 #### Comment contrer cette protection d'écriture ?
 
-Dans un premier temps, par logique, je me suis dit qu'il devait y avoir un élément qui bloque le trafic entre la pin **TX de mon CH340G** et la pin **RX du routeur**. En cherchant un peu, on se rend vite compte qu'il y a une **résistance de type SMD** plutôt suspect juste en face de la pin **RX du routeur**. C'est une méthode assez courante comme **sécurité pour l'UART** pour bloquer l'écriture sur la console série, elle permet de couper la transmission émise de la pin **TX de l'USB**, la pin **RX de la PCB** reçoit bien les données mais lorsqu'elle les transmet au **CPU** pour l'interprétation, la **résistance les bloque**.
+Dans un premier temps, par logique, je me suis dit qu'il devait y avoir un élément qui bloque le trafic entre la pin **TX de mon CH340G** et la pin **RX du routeur**. En cherchant un peu, on se rend vite compte qu'il y a une **résistance de type SMD** plutôt suspect juste en face de la pin **RX du routeur** (R18). C'est une méthode assez courante comme **sécurité pour l'UART** pour bloquer l'écriture sur la console série, elle permet de couper la transmission émise de la pin **TX de l'USB**, la pin **RX de la PCB** reçoit bien les données mais lorsqu'elle les transmet au **CPU** pour l'interprétation, la **résistance les bloque**.
 
 Avec un multimètre, on obtient une valeur de **1kΩ** sur cette résistance, ça pourrait donc être notre responsable.
 
@@ -162,7 +162,7 @@ Après avoir réalisé cet essais afin de confirmer que le problème survenu lor
 
 Et bien, pour vérifier une dernière fois avant d'enlever la résistance, j'ai décidé d'alimenter en **5V** un court instant depuis mon **CH340G** histoire de tester et de voir si je pouvais entrer des commandes.
 
-Ça marche! Nous avons donc effectivement trouvé notre coupable. J’ai pensé que **déssouder la résistance** serait trop dangereux pour l'intégrité des autres étants donnés leurs espacements très faibles (2 autres résistances SMD très proches), mais avec une **pince de précision coudée**, ça a fait l'affaire. On aurait également pu faire un pont avec un fil à étain entre la pin RX du routeur et la sortie de la résistance sur le circuit qui bloque la transmission des bits envoyés par la pin **TX du CH340G**.
+Ça marche! Nous avons donc effectivement trouvé notre coupable. J’ai pensé que **déssouder la résistance** (R18) serait trop dangereux pour l'intégrité des autres étants donnés leurs espacements très faibles (2 autres résistances SMD très proches), mais avec une **pince de précision coudée**, ça a fait l'affaire. On aurait également pu faire un pont avec un fil à étain entre la pin RX du routeur et la sortie de la résistance sur le circuit qui bloque la transmission des bits envoyés par la pin **TX du CH340G**.
 
 ![root](/images_extraire_fichiers_systeme_TL-WR841N-v14/Screenshot_20240526_041428.png)
 On peut voir que nous avons un **shell root** par défaut **sans authentification au préalable**!
