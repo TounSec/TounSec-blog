@@ -188,7 +188,7 @@ defaultContentLanguage = "fr"
 
   [[params.social]]
     name = "email"
-    url  = "tounsec-cyber@proton.me"
+    url  = "mailto:tounsec-cyber@proton.me"
     icon = "fa-solid fa-envelope"
 
   [[params.social]]
