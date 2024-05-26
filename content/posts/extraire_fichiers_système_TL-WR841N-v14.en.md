@@ -188,11 +188,11 @@ To begin with, let's take a look at which system files can be read and, above al
 
 In general, **rootfs**, **proc** and **sys** are write-restricted for security reasons, so we're left with **ramfs** (/var). Note that, as the name suggests, storage is intended for **RAM**, which is volatile, so when the router is rebooted, our actions will be erased.
 
-Let's take a look at the **busy-box** functions available on our router
+Let's take a look at the **busybox** functions available on our router
 ![busybox](/images_extraire_fichiers_systeme_TL-WR841N-v14/Screenshot_20240526_134114.png)
 We notice that busybox is limited in terms of functionality, but we have **tftp**!
 
-Before continuing, make sure you have access to the router's network either via an ethernet bridge between your router and your computer or wirelessly. Install **tftp** and **configure its server** on your computer, then follow this guide [HERE](https://www.fosslinux.com/50694/install-tftp-server-debian.htm) (remember to configure in relation to the router's network). The following repository may be useful, as it gathers useful binary files to compile for the MIPS architecture [HERE](https://github.com/darkerego/mips-binaries/tree/master). Here we'll need `busy-mipsel` as the processor takes **MIPSel** into account, so in **little-endian** [HERE](https://busybox.net/downloads/binaries/1.21.1/).
+Before continuing, make sure you have access to the router's network either via an ethernet bridge between your router and your computer or wirelessly. Install **tftp** and **configure its server** on your computer, then follow this guide [HERE](https://www.fosslinux.com/50694/install-tftp-server-debian.htm) (remember to configure in relation to the router's network). The following repository may be useful, as it gathers useful binary files to compile for the MIPS architecture [HERE](https://github.com/darkerego/mips-binaries/tree/master). Here we'll need `busybox-mipsel` as the processor takes **MIPSel** into account, so in **little-endian** [HERE](https://busybox.net/downloads/binaries/1.21.1/).
 
 Now go to **/var/tmp** and download **busybox-mipsel** using **tftp**.
 ![busybox-mipsel](/images_extraire_fichiers_systeme_TL-WR841N-v14/Screenshot_20240526_153637.png)

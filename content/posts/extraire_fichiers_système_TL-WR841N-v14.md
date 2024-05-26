@@ -188,11 +188,11 @@ Pour commencer, voyons quel fichier système permet la lecture mais surtout l'é
 
 En général, **rootfs**, **proc** et **sys** sont restreints au niveau de l'écriture pour des raisons de sécurité, malgré les permissions, il nous reste donc **ramfs** (/var). À savoir que comme son nom l'indique, le stockage est destiné à la **RAM**, cette mémoire étant volatille, lors du redémarrage du routeur, nos actions seront effacées.
 
-Voyons les fonctions de **busy-box** disponible sur notre routeur
+Voyons les fonctions de **busybox** disponible sur notre routeur
 ![busybox](/images_extraire_fichiers_systeme_TL-WR841N-v14/Screenshot_20240526_134114.png)
 On remarque que busybox est limité au niveau de ses fonctionnalitées, mais nous avons **tftp** !
 
-Avant de continuer assurez-vous que vous avez un accès au réseau du routeur soit par un pont ethernet entre votre routeur et votre ordinateur ou en sans fil. Installé **tftp** et **configuré son serveur** sur votre ordinateur, vous pouvez suivre ce guide [HERE](https://www.fosslinux.com/50694/install-tftp-server-debian.htm) (penser à configurer par rapport au réseau du routeur). Le repos suivant peut être utile, il rassemble des fichiers binaire utile compiler pour l'architecture MIPS [HERE](https://github.com/darkerego/mips-binaries/tree/master). Ici nous aurons besoin de `busy-mipsel`  car le processeur prend en compte **MIPSel** donc en **little-endian** [HERE](https://busybox.net/downloads/binaries/1.21.1/).
+Avant de continuer assurez-vous que vous avez un accès au réseau du routeur soit par un pont ethernet entre votre routeur et votre ordinateur ou en sans fil. Installé **tftp** et **configuré son serveur** sur votre ordinateur, vous pouvez suivre ce guide [HERE](https://www.fosslinux.com/50694/install-tftp-server-debian.htm) (penser à configurer par rapport au réseau du routeur). Le repos suivant peut être utile, il rassemble des fichiers binaire utile compiler pour l'architecture MIPS [HERE](https://github.com/darkerego/mips-binaries/tree/master). Ici nous aurons besoin de `busybox-mipsel`  car le processeur prend en compte **MIPSel** donc en **little-endian** [HERE](https://busybox.net/downloads/binaries/1.21.1/).
 
 Maintenant, rendez-vous dans **/var/tmp** puis télécharger **busybox-mipsel** à l'aide de **tftp**
 ![busybox-mipsel](/images_extraire_fichiers_systeme_TL-WR841N-v14/Screenshot_20240526_153637.png)
