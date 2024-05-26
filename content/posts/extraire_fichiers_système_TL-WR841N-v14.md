@@ -80,7 +80,7 @@ Dans notre cas, le **MicroController Unit** (MCU) est composée d'un **CPU**, d'
 
 Comme précisé précédemment, dans le cas de ce produit, il existe seulement une série de **4 points de test** et ils sont référencés. Cependant, sur une PCB plus imposante, il est plus compliqué de les trouver, on peut baser ces recherches sur plusieurs informations.
 
-*Chercher **4 points de test successifs**, trouver une **masse sur le matériel**, placer votre sonde de négative (noir) sur la masse que vous avez trouvé comme point de référence, puis à l'aide de la sonde rouge tester la tension (V) de ces 4 pins, normalement vous devriez trouver ces valeurs dans le cadre de notre cible:*
+*Chercher **4 points de test successifs**, trouver une **masse sur le matériel**, placer votre sonde négative (noir) sur la masse que vous avez trouvé comme point de référence, puis à l'aide de la sonde rouge tester la tension (V) de ces 4 pins, normalement vous devriez trouver ces valeurs dans le cadre de notre cible:*
 - **VCC** ≅ 3.3V
 - **GND** = 0.0V
 - **RX** = 0.0V
