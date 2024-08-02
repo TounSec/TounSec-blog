@@ -1,5 +1,5 @@
 ---
-title: "Exploration of the Flipper Zero: A powerful & Versatile ally !"
+title: "🌍 Exploration of the Flipper Zero: A powerful & Versatile ally ! 🌏"
 date: 2023-07-15
 category: "Hardware"
 tags: ["Hardware", "FlipperZero"]

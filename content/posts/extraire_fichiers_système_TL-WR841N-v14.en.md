@@ -1,5 +1,5 @@
 ---
-title: "Extracting system files from a TL-WR841N v14"
+title: "👾 Extracting system files from a TL-WR841N v14 👾"
 date: 2024-05-26
 draft: false
 category: ["Hardware"]

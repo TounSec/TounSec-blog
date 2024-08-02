@@ -4,7 +4,8 @@ languageCode = "en-us"
 theme = "hello-4s3ti"
 
 PygmentsCodeFences = true
-PygmentsStyle = "monokai"
+#PygmentsStyle = "friendly_grayscale"
+PygmentsStyle = "dracula"
 
 paginate  = 10
 
@@ -56,7 +57,7 @@ defaultContentLanguage = "fr"
   
   # Metadata mostly used in document's head
   # 
-  description = "TounSec Hardware & Reverse blog"
+  description = "Low-level blog"
   keywords = ""
   images = [""]
 
@@ -65,7 +66,7 @@ defaultContentLanguage = "fr"
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Hardware & Reverse Engineering Blog"
+  homeSubtitle = "Low-level Blog"
 
   # Set a background for the homepage
   backgroundImage = "/img/fotor-ai-20240525134852.jpg"
@@ -218,6 +219,16 @@ defaultContentLanguage = "fr"
     identifier = "posts"
     name       = "Posts"
     url        = "posts/"
+  # [[menu.main]]
+  #   identifier = "materials"
+  #   name       = "Materials"
+  #   url        = "materials/"
+  # [[menu.main]]
+  #   identifier = "scheduler"
+  #   name       = "Scheduler"
+  #   url        = "scheduler/"
+
+
   # [[menu.main]]
   #   identifier = "tools"
   #   name       = "Tools"

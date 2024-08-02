@@ -1,5 +1,5 @@
 ---
-title: "Exploration de l’outil Flipper Zéro : Un allié Puissant & Polyvalent !"
+title: "🌍 Exploration de l’outil Flipper Zéro : Un allié Puissant & Polyvalent ! 🌏"
 date: 2023-07-15
 draft: false
 category: "Hardware"
