@@ -223,10 +223,10 @@ defaultContentLanguage = "fr"
   #   identifier = "materials"
   #   name       = "Materials"
   #   url        = "materials/"
-  # [[menu.main]]
-  #   identifier = "scheduler"
-  #   name       = "Scheduler"
-  #   url        = "scheduler/"
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "projects/"
 
 
   # [[menu.main]]
